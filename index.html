@@ -6,7 +6,7 @@ background: '/img/bg-index.jpg'
 
 <!-- Home Intro
 ================================================== -->
-{% if page.url == "/" %} 
+<!-- {% if page.url == "/" %} 
 <div class="rounded mb-5 hero">
   <div class="row align-items-center justify-content-between">
     <div class="col-md-6">
@@ -19,11 +19,11 @@ background: '/img/bg-index.jpg'
     </div>
   </div>
 </div>
-{% endif %}
+{% endif %} -->
 
 <!-- Featured
 ================================================== -->
-<section class="row">
+<!-- <section class="row">
   {% for post in site.posts %}
       {% if post.featured == true %}
           <div class="col-md-4 mb-5">
@@ -32,7 +32,7 @@ background: '/img/bg-index.jpg'
       {% endif %}
   {% endfor %}
   </div>
-</section>
+</section> -->
 
 <!-- Posts List with Sidebar (except featured)
 ================================================== -->
@@ -40,11 +40,9 @@ background: '/img/bg-index.jpg'
   <!-- <div class="col-sm-8"> -->
     <div class="row">
       {% for post in paginator.posts %}
-      {% unless post.featured == true %}
       <div class="col-md-6 mb-5">
         {% include postbox.html %}
       </div>
-      {% endunless %}
       {% endfor %}
     </div>
     <!-- Pagination -->
