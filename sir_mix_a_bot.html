@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Sir-Mix-A-Bot</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+
+            <center>
+            <h2 class="portfolio-title">Sir Mix-A-Bot</h2>
+
+            <div class="portfolio-details-slider swiper"> 
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                   <img src="assets/img/portfolio/mix-a-bot.gif" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+
+            <!-- <div class="portfolio-details-slider swiper"> -->
+                <!-- <center>
+                  <img src="assets/img/portfolio/mix-a-bot.gif" alt="">
+              </center> -->
+            <!-- </div> -->
+          </center>
+          </div>
+
+          <div class="col-lg-6 portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Embedded Systems, Simulation</li>
+              <!-- <li><strong>Client</strong>: ASU Company</li> -->
+              <li><strong>Completion date</strong>: 20 December, 2021</li>
+              <li><strong>Github Repository</strong>: <a href="#">https://github.com/MDecarabas/sir-mix-a-bot</a></li>
+            </ul>
+
+            <p>
+              During the first quarter of my master's project one of the core classes I took was embedded systems. 
+              The purpose of the class was to teach students how to interface with different robots using the Robotic Operating System, also known as ROS.
+              As the capstone project teams of 5 students were formed with the task of using a robotic arm to achieve any task they so desire. 
+              My team and I used the 7 DOF Franka Emika Panda arm to create a robotic bartender, Sir Mix-A-Bot. 
+            </p>
+
+
+            <p>
+              The goal was to set up a table of ingredients for the robot and a beer tray in front of it. The robot would then be told using written or vocal commands a drink from its menu.
+              Once the robot had between 1-4 drink orders it would begin to prepare the drinks using the ingredients available. The robot used ROS alongside the MoveIt Robotic library to control the movement of the arm to the desired locations. These locations were made visible using a combination of April Tags
+              and computer vision which involved colour detection. 
+              
+            </p>
+
+            <p>
+              My role on the team was that of integrator, as well as being in charge of coding the movement of the arm. As such I learned and developed my abilities 
+              to merge and resolve github merge commits, as well as learning how to take multiple pieces and assemble them into a cohesive whole. As the person in charge of
+              coding the ROS nodes for the arm I learned in depth about using the moveIt library, as well as how to best interface with its path planning algorithm since that 
+              was one of the biggest challenges. Due to spillage being a big problem with this project the arm had to be ensured to be fixed for certain joints. However, combining
+              that aspect with the face that the robot determined an optimal trajectory to get to its objective meant it would choose motions that would lead to it locking.
+              
+            </p>
+
+            <p>
+              This challange was overcome through 2 methods, splitting the problem into repeating states, and fixing in relation to 3d space certain required positions. 
+              The problem ended up being split into: grab, pour, move to drink, and place back situations. This meant that whenever the robot was called to get a drink 
+              it would repeat this pottential tasks in some combination. On top of doing so to streamline the process of getting a drink to the user, we were also able
+              to include a break position. This position tasked the robot to going to a certain location so that it would reset its joints in a position that allowed for 
+              the arm to reach the next tasked position using less of its array of motion. By doing so we were able to secure that the path planner would no longer choose
+              convoluted routes, and that the drink could reach the user faster.  
+              
+            </p>
+
+            <p>For a more detailed look into a code I encourage you to visit the attached github repository.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+
+  </main><!-- End #main -->
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <canvas class="background"></canvas>
+  <script src="assets/js/main.js"></script>
+  <script src= "assets/js/particles/dist/particles.min.js"></script>
+</body>
+
+</html>

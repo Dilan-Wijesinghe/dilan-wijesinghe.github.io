@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Physics Simulation</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+
+            <center>
+            <h2 class="portfolio-title">Physics Simulation</h2>
+
+            <div class="portfolio-details-slider swiper"> 
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                   <img src="assets/img/portfolio/physics_sim.gif" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/ezgif.com-gif-maker (7).jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </center>
+          </div>
+
+          <div class="col-lg-6 portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Simulation</li>
+              <li><strong>Completion date</strong>: 20 December, 2021</li>
+              <li><strong>Github Repository</strong>: <a href="#">https://github.com/MDecarabas/physics-simulation</a></li>
+            </ul>
+
+            <p>
+              The goal of this project was to demonstrate modeling a dynamic simulation using Lagrangian dynamics. 
+              This project is meant to simulate the physics of 2 cups, one inside of another, when a force is exerted.
+              The main outcome of the project was my ability to understand how these simulations work, which will
+              allow me in the future to better judge the accuracy of a simulation.
+            </p>
+
+            <p>
+              The system has 6 degrees of freedom. This means there are 6 configuration variables, 3 for each box. 
+              Each object is fully defined with an x and y coordinate and an angle (θ).
+            </p>
+
+            <p>
+              There are 16 constraints because each side of the jack can hit any of the four walls of the box. I formed the constraint equations by calculating the position of tips of the jack in the frames of the box walls. 
+              Then, I set the x or y coordinate of the transformation matrix equal to 0 representing collision between the jack and the box. For the transformations between the jack and the left and right walls of the box, I set the x coordinate equal to zero. 
+              For the transformations between the jack and the top and bottom walls of the box, I set the y coordinate equal to zero.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+
+  </main><!-- End #main -->
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <canvas class="background"></canvas>
+  <script src="assets/js/main.js"></script>
+  <script src= "assets/js/particles/dist/particles.min.js"></script>
+</body>
+
+</html>
