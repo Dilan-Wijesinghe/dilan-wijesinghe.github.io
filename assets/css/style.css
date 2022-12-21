@@ -431,13 +431,45 @@ section .container {
   /* color: #fff; */
 }
 
+.me-section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 20px 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color:#222323;
+  /* color: #aaaaaa; */
+  font-family: "Poppins", sans-serif;
+}
+.me-section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  /* background: #4ceb95; */
+  background: #222323;
+  margin: 4px 10px;
+}
+
+.me-section-title p {
+  margin: -15px 0 15px 0px;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #222323;
+  /* color: #fff; */
+}
+
 .portfolio-section-title h2 {
   font-size: 14px;
   font-weight: 500;
   padding: 0;
   line-height: 1px;
   margin: 0 0 20px 0;
-  margin-left: 10px;
+  margin-left: 30px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color:#222323;
@@ -456,7 +488,7 @@ section .container {
 }
 
 .portfolio-section-title p {
-  margin: -15px 0 15px 10px;
+  margin: -15px 0 15px 30px;
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
@@ -465,7 +497,9 @@ section .container {
   /* color: #fff; */
 }
 
-
+.portfolio-row {
+  margin: -10px 30px 30px 30px;
+}
 
 /*--------------------------------------------------------------
 # About
@@ -542,7 +576,7 @@ section .container {
 # Skills
 --------------------------------------------------------------*/
 .skills .progress {
-  height: 35px;
+  height: 42px;
   display: block;
   background: none;
   border-radius: 0;
@@ -555,6 +589,7 @@ section .container {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #222323; 
+  font-size: 14px;
   /* color: #fff; */
 }
 .skills .progress .skill .val {
@@ -1218,9 +1253,9 @@ section .container {
 
 
 /* Bootstrap Grid Tests */
-.row {
+/* .row {
   background: #FAF9F6;
-} 
+}  */
 
 /* .column { */
   /* border-style: solid;
