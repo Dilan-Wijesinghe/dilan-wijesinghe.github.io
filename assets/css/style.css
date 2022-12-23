@@ -1041,7 +1041,8 @@ section .container {
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-top: 35px;
+  margin-bottom: -5px;
 }
 .portfolio-details .portfolio-info ul {
   list-style: none;
@@ -1257,6 +1258,11 @@ section .container {
   margin-right: auto;
   width: 100%; 
   height: 100%;
+}
+
+.portfolio-row-images {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
