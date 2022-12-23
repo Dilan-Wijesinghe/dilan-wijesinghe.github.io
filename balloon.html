@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio - Balloon Volleyball</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="col">
+            <h2 class="portfolio-title">Balloon Volleyball with a 7-DOF Robot Arm</h2>
+            <div>
+              <img src="assets/img/portfolio/balloon_move.gif" alt="">
+            </div>
+
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Embedded Systems, ROS2, MoveIt, Python, OpenCV</li>
+              <!-- <li><strong>Client</strong>: ASU Company</li> -->
+              <li><strong>Completion date</strong>: 8 December, 2022</li>
+              <li><strong>Github Repository</strong>:
+                <a href="https://github.com/Dilan-Wijesinghe/AirTrafficControl" class="instagram"><i class="bi bi-github"></i></a>
+              </li>
+            </ul>
+
+            <p>
+              In this project, we decided to replicate the game 'Don't let the balloon touch the floor' with a Franka Emika Panda robot arm. 
+              With the help of a RealSense D435i camera, our robot is able to predict the landing location of a balloon, and move there before it hits the ground.
+              The robot then taps the balloon back up into the air, and waits for the balloon to start falling before intercepting it again.
+              A user may interact with the balloon to help assist in the process.
+            </p>
+
+            <p>
+              My primary role on the team was to design and implement a perception pipeline that can track the balloon in a 3D space in real time. This entailed
+              finding the centroid of the balloon and sending this over to the prediction and trajectory execution nodes. Here is an example of the final implementation
+              of the balloon tracking.
+            </p>
+
+            <div class="balloon-tracking">
+              <img src="assets/img/portfolio/balloon_tracking.gif" width="100%" alt=""/>
+            </div>
+
+            <p>
+              The perception pipeline utilizes a RealSense D435i camera, which provides RGB-D data. To preserve speed, I decided to use Background Subtraction, 
+              which isolates the moving objects within the scene. This works perfect for tracking the balloon, but only if we could guarantee that the balloon 
+              is the only moving object in the scene. Unfortunately, this alone would not work since the camera would pick up random artifacts that it detected 
+              were moving. This was especially important since our prediction relied heavily on very accurate data. Thus we had to make some improvements!
+            </p>
+
+            <p>
+              In order to improve upon this, I decided to isolate only the red objects in the scene. After creating a frame that isolated the red objects, 
+              I applied background subtraction to it. When an object that fit the criteria was found, it would create a circle and find its center. 
+              Finally, it would calculate the real world (x,y,z) location of the center, and send it to the prediction and trajectory nodes.
+            </p>
+
+            <p>For more details on the entire project please checkout our github repository!</p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+
+  </main><!-- End #main -->
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <canvas class="background"></canvas>
+  <script src="assets/js/main.js"></script>
+  <script src= "assets/js/particles/dist/particles.min.js"></script>
+</body>
+
+</html>
