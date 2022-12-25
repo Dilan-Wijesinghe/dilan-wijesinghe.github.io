@@ -51,38 +51,27 @@
               <!-- <li><strong>Client</strong>: ASU Company</li> -->
               <li><strong>Completion date</strong>: 8 December, 2022</li>
               <li><strong>Github Repository</strong>:
-                <a href="https://github.com/Dilan-Wijesinghe/" class="instagram"><i class="bi bi-github"></i></a>
+                <a href="https://github.com/Dilan-Wijesinghe/" class="instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
               </li>
             </ul>
 
             <p>
-              In this project, we decided to replicate the game 'Don't let the balloon touch the floor' with a Franka Emika Panda robot arm. 
-              With the help of a RealSense D435i camera, our robot is able to predict the landing location of a balloon, and move there before it hits the ground.
-              The robot then taps the balloon back up into the air, and waits for the balloon to start falling before intercepting it again.
-              A user may interact with the balloon to help assist in the process.
-            </p>
-
-            <p>
-              My primary role on the team was to design and implement a perception pipeline that can track the balloon in a 3D space in real time. This entailed
-              finding the centroid of the balloon and sending this over to the prediction and trajectory execution nodes. Here is an example of the final implementation
-              of the balloon tracking.
-            </p>
-
-            <div class="balloon-tracking">
-              <img src="assets/img/portfolio/balloon_tracking.gif" width="100%" alt=""/>
+              In this project, I simulated the physics for a Dice in a Box as my final project for my Machine Dynamics class. In it, I calculated the collisions between the dice
+              and the box, as well as the forces keeping the box up and rotating.
+            </p>     
+            
+            <div>
+              <img src="assets/img/portfolio/physics.png" height="60%" width="60%" alt=""/>
             </div>
 
-            <p>
-              The perception pipeline utilizes a RealSense D435i camera, which provides RGB-D data. To preserve speed, I decided to use Background Subtraction, 
-              which isolates the moving objects within the scene. This works perfect for tracking the balloon, but only if we could guarantee that the balloon 
-              is the only moving object in the scene. Unfortunately, this alone would not work since the camera would pick up random artifacts that it detected 
-              were moving. This was especially important since our prediction relied heavily on very accurate data. Thus we had to make some improvements!
-            </p>
 
             <p>
-              In order to improve upon this, I decided to isolate only the red objects in the scene. After creating a frame that isolated the red objects, 
-              I applied background subtraction to it. When an object that fit the criteria was found, it would create a circle and find its center. 
-              Finally, it would calculate the real world (x,y,z) location of the center, and send it to the prediction and trajectory nodes.
+              To begin, I defined transformation frames for each corner of the dice and each side of the box. This was used to calculate the collisions between 
+              the two when there was an impact. I then calculated the dynamics of the dice and box, using their kinetic and potential energies to write 
+              Lagrangians. With these Lagrangians, I calculated their Euler-Lagrange equations. With this, I was able to simulate the behaviour of the dice and the box 
+              falling in gravity. I next added in two forces, a force on the y of the box to counteract gravity, and a force on the angle of the box, to spin it. 
+              Finally, I wrote in the possible collisions of the dice and the box. As you can see in the video, when the dice and the box collide, we can see a fully elastic 
+              impact happen.
             </p>
 
             <p>For more details on the entire project please checkout our github repository!</p>
