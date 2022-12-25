@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - Physics Simulation</title>
+  <title>Portfolio - Physics Sim</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,55 +38,54 @@
     <div id="portfolio-details" class="portfolio-details">
       <div class="container">
 
-        <div class="row">
-          <div class="col-lg-6">
-
-            <center>
+        <div class="col">
             <h2 class="portfolio-title">Physics Simulation</h2>
-
-            <div class="portfolio-details-slider swiper"> 
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                   <img src="assets/img/portfolio/physics_sim.gif" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/ezgif.com-gif-maker (7).jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
+            <div>
+              <img src="assets/img/portfolio/physics.gif" alt="">
             </div>
 
-          </center>
-          </div>
-
-          <div class="col-lg-6 portfolio-info">
-            <h3>Project information</h3>
+          <div class="portfolio-info">
+            <h2>Project information</h2>
             <ul>
-              <li><strong>Category</strong>: Simulation</li>
-              <li><strong>Completion date</strong>: 20 December, 2021</li>
-              <li><strong>Github Repository</strong>: <a href="#">https://github.com/MDecarabas/physics-simulation</a></li>
+              <li><strong>Category</strong>: Python</li>
+              <!-- <li><strong>Client</strong>: ASU Company</li> -->
+              <li><strong>Completion date</strong>: 8 December, 2022</li>
+              <li><strong>Github Repository</strong>:
+                <a href="https://github.com/Dilan-Wijesinghe/" class="instagram"><i class="bi bi-github"></i></a>
+              </li>
             </ul>
 
             <p>
-              The goal of this project was to demonstrate modeling a dynamic simulation using Lagrangian dynamics. 
-              This project is meant to simulate the physics of 2 cups, one inside of another, when a force is exerted.
-              The main outcome of the project was my ability to understand how these simulations work, which will
-              allow me in the future to better judge the accuracy of a simulation.
+              In this project, we decided to replicate the game 'Don't let the balloon touch the floor' with a Franka Emika Panda robot arm. 
+              With the help of a RealSense D435i camera, our robot is able to predict the landing location of a balloon, and move there before it hits the ground.
+              The robot then taps the balloon back up into the air, and waits for the balloon to start falling before intercepting it again.
+              A user may interact with the balloon to help assist in the process.
             </p>
 
             <p>
-              The system has 6 degrees of freedom. This means there are 6 configuration variables, 3 for each box. 
-              Each object is fully defined with an x and y coordinate and an angle (θ).
+              My primary role on the team was to design and implement a perception pipeline that can track the balloon in a 3D space in real time. This entailed
+              finding the centroid of the balloon and sending this over to the prediction and trajectory execution nodes. Here is an example of the final implementation
+              of the balloon tracking.
+            </p>
+
+            <div class="balloon-tracking">
+              <img src="assets/img/portfolio/balloon_tracking.gif" width="100%" alt=""/>
+            </div>
+
+            <p>
+              The perception pipeline utilizes a RealSense D435i camera, which provides RGB-D data. To preserve speed, I decided to use Background Subtraction, 
+              which isolates the moving objects within the scene. This works perfect for tracking the balloon, but only if we could guarantee that the balloon 
+              is the only moving object in the scene. Unfortunately, this alone would not work since the camera would pick up random artifacts that it detected 
+              were moving. This was especially important since our prediction relied heavily on very accurate data. Thus we had to make some improvements!
             </p>
 
             <p>
-              There are 16 constraints because each side of the jack can hit any of the four walls of the box. I formed the constraint equations by calculating the position of tips of the jack in the frames of the box walls. 
-              Then, I set the x or y coordinate of the transformation matrix equal to 0 representing collision between the jack and the box. For the transformations between the jack and the left and right walls of the box, I set the x coordinate equal to zero. 
-              For the transformations between the jack and the top and bottom walls of the box, I set the y coordinate equal to zero.
+              In order to improve upon this, I decided to isolate only the red objects in the scene. After creating a frame that isolated the red objects, 
+              I applied background subtraction to it. When an object that fit the criteria was found, it would create a circle and find its center. 
+              Finally, it would calculate the real world (x,y,z) location of the center, and send it to the prediction and trajectory nodes.
             </p>
+
+            <p>For more details on the entire project please checkout our github repository!</p>
 
           </div>
 

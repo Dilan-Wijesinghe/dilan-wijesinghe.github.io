@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - Sir-Mix-A-Bot</title>
+  <title>Portfolio - Mobile Manipulator</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,56 +38,61 @@
     <div id="portfolio-details" class="portfolio-details">
       <div class="container">
 
-        <div class="row">
-          <div class="col-lg-6">
-
-            <center>
-            <h2 class="portfolio-title">Sir Mix-A-Bot</h2>
-
-            <div class="portfolio-details-slider swiper"> 
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                   <img src="assets/img/portfolio/mobile_sim.gif" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/next_task.gif" alt="">
-                </div>
-
-                <!-- <div class="swiper-slide">
-                  <img src="assets/img/portfolio/mix-a-bot.gif" alt="">
-                </div> -->
-
-              </div>
-              <div class="swiper-pagination"></div>
+        <div class="col">
+            <h2 class="portfolio-title">Mobile Manipulation</h2>
+            <div>
+              <img src="assets/img/portfolio/coppelia0.gif" alt="">
             </div>
 
-
-            <!-- <div class="portfolio-details-slider swiper"> -->
-                <!-- <center>
-                  <img src="assets/img/portfolio/mix-a-bot.gif" alt="">
-              </center> -->
-            <!-- </div> -->
-          </center>
-          </div>
-
-          <div class="col-lg-6 portfolio-info">
-            <h3>Project information</h3>
+          <div class="portfolio-info">
+            <h2>Project information</h2>
             <ul>
-              <li><strong>Category</strong>: Simulation</li>
+              <li><strong>Category</strong>: Robot Manipulation, Python, CoppeliaSim</li>
               <!-- <li><strong>Client</strong>: ASU Company</li> -->
-              <li><strong>Completion date</strong>: 20 December, 2021</li>
-              <li><strong>Github Repository</strong>: <a href="#">https://github.com/MDecarabas/Mobile-Manipulation-Simulation</a></li>
+              <li><strong>Completion date</strong>: 8 December, 2022</li>
+              <li><strong>Github Repository</strong>:
+                <a href="https://github.com/Dilan-Wijesinghe/" class="instagram"><i class="bi bi-github"></i></a>
+              </li>
             </ul>
 
+            <h3>Project Overview</h3>
+
             <p>
-              The purpose of this project was to demonstrate understanding of the math behind robotic manipulation. I wrote Python code that plans a trajectory, calculates odometry, and performs feedback control. The code outputs a csv file, that can be imported into CoppeliaSim to visualize results.
+              In this project, I was tasked with creating a script to move a KUKA YouBot to a cube, pick up the cube, and drop it off at a new destination. 
+              This involved three different tasks, computing the kinematics, creating a reference trajectory for the end-effector, and designing a 
+              feedforward control with a feedback control law. 
             </p>
-              
+
+            <h3>Process</h3>
+
             <p>
-              After generating a reference trajectory, I worked towards simulating the YouBot's kinematics. I wrote a function, NextState, that inputs the current robot configuration and joint speeds. The function uses first-order Euler integration to calculate wheel and joint angles at the next time step. I then calculated the chasis configuration based on the change in wheel angles over the time step. To do this, I started with the body twist of a four-mecanum-wheel robot. Using matrix exponentials I determined the transformation from the space frame to the robot chasis. Combining these configuration variables gives the entire YouBot configuration at the next time step.
+              To begin the project, I first created a reference trajectory for the end-effector. This required computing several cartesian and screw trajectories 
+              for the end-effector as it moves to specific locations. These locations were defined by a transformation matrix, one that describes a rotation and (x,y,z) 
+              position. With this information, I was able to tell the end-effector to move to a specified location and also close its grippers. 
             </p>
+
+            <p>
+              The next task was to get the robot to move to a specified location, updating the joint and wheel angles, as well as the odometry of the chassis.
+              I accomplished this by creating a function called NextState, that updates the configuration of the robot based off the wheel speeds, a change in time (dt),
+              and the max speed of the wheels. 
+            </p>
+
+            <p>
+              Finally, I wrote a function FeedbackControl that would calculate the kinematic task-space feedforward as well as the feedback control law. This involved 
+              taking the location of the end-effector and tuning gains. 
+            </p>
+
+            <div>
+              <img src="assets/img/portfolio/coppelia1.gif" alt=""/>
+            </div>
+
+            <p>
+              In conclusion, I was able to simulate the movement and control of a KUKA YouBot in CoppeliaSim. This project was a wonderful way to understand the 
+              full process of controlling a robot to perform a specific task. 
+            </p>
+
+            <p>For more details on the entire project please checkout our github repository!</p>
+
           </div>
 
         </div>
