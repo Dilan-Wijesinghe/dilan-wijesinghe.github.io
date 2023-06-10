@@ -39,6 +39,13 @@ body {
   /* height: 100vh; */
 }
 
+.container {
+  border-style: solid;
+  border-color: #222323;
+  border-width: 1px;
+  margin-bottom: 25px;
+}
+
 /* .particle-container {
   width: 100vw;
 } */
@@ -1148,7 +1155,7 @@ section .container {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
   position: fixed;
   left: 0;
   right: 0;
@@ -1159,11 +1166,15 @@ section .container {
 .portfolio-details .container {
   padding-top: 20px;
   padding-bottom: 40px;
+  border-color: #222323;
+  border-width: 1px;
 }
 .portfolio-details .portfolio-title {
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 .portfolio-details .portfolio-info {
   padding-top: 45px;
@@ -1173,6 +1184,9 @@ section .container {
   font-weight: 400;
   margin-top: 35px;
   margin-bottom: -5px;
+  text-align: left;
+  display: flex;
+  justify-content: left;
 }
 .portfolio-details .portfolio-info ul {
   list-style: none;
@@ -1185,6 +1199,7 @@ section .container {
 .portfolio-details .portfolio-info p {
   font-size: 15px;
   padding: 15px 0 0 0;
+  text-align: justify;
 }
 @media (max-width: 992px) {
   .portfolio-details .portfolio-info {
@@ -1394,6 +1409,51 @@ section .container {
 .portfolio-row-images {
   display: flex;
   flex-wrap: wrap;
+}
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* BMO ROW */
+.bmo_row {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 0 1px; */
+}
+
+/* Create four equal columns that sits next to each other */
+.bmo_column {
+  flex: 33.3%;
+  max-width: 33.3%;
+  /* padding: 0 1px; */
+}
+
+.bmo_column img {
+  /* margin-top: 2px; */
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .bmo_column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .bmo_column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 

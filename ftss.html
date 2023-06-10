@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,10 +41,10 @@
       <div class="container">
 
         <div class="col">
-            <h2 class="portfolio-title">GAN Aided Image Reconstruction</h2>
-            <div>
-              <img src="assets/img/portfolio/GanTransform.gif" alt="">
-            </div>
+          <h2 class="portfolio-title">GAN Aided Image Reconstruction</h2>
+          <div class="center-image">
+            <img src="assets/img/portfolio/GanTransform.gif" alt="">
+          </div>
 
           <div class="portfolio-info">
             <h2>Project information</h2>
@@ -51,83 +53,117 @@
               <!-- <li><strong>Client</strong>: ASU Company</li> -->
               <li><strong>Completion date</strong>: 3 March, 2022</li>
               <li><strong>Github Repository</strong>:
-                <a href="https://github.com/Dilan-Wijesinghe/GAIR" class="instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                <a href="https://github.com/Dilan-Wijesinghe/GAIR" class="instagram" target="_blank"
+                  rel="noopener noreferrer"><i class="bi bi-github"></i></a>
               </li>
             </ul>
-            
-            <h3>Project Overview</h3>
+
+            <div>
+              <h3>Project Overview</h3>
               <p>
-              As part of my research under the Computational Sensing and Information Processing Lab (CSIP Lab) at the University of California, Riverside, I explored
-              how a pre-trained Generative Adversarial Networks (GAN) could be used to help aid in Compressed Sensing and Image Reconstruction problems. This involved 
-              randomly sampling sensor measurements and using a GAN and gradient descent to 'guess' then converge to a similar looking image. 
+                As part of my research under the Computational Sensing and Information Processing Lab (CSIP Lab) at the
+                University of California, Riverside, I explored
+                how a pre-trained Generative Adversarial Networks (GAN) could be used to help aid in Compressed Sensing
+                and Image Reconstruction problems. This involved
+                randomly sampling sensor measurements and using a GAN and gradient descent to 'guess' then converge to a
+                similar looking image.
               </p>
-            
-            <h3>Introduction</h3>
+            </div>
+
+            <div>
+              <h3>Introduction</h3>
               <p>
-                To begin this project, I first implemented a version of the paper 
-                <a href="https://ieeexplore.ieee.org/document/9466266" target="_blank" rel="noopener noreferrer">"Deconvolving Diffraction for Fast Imaging of Sparse Scenes"</a> which utilized a diffractive lens 
-                to spread a point in the scene using a point-spread-function (PSF). Using an implementation of CSIP Lab's Lensless Camera point-spread-function, I was able to
-                mimic the same behavior.  
+                To begin this project, I first implemented a version of the paper
+                <a href="https://ieeexplore.ieee.org/document/9466266" target="_blank"
+                  rel="noopener noreferrer">"Deconvolving Diffraction for Fast Imaging of Sparse Scenes"</a> which
+                utilized a diffractive lens
+                to spread a point in the scene using a point-spread-function (PSF). Using an implementation of CSIP
+                Lab's Lensless Camera point-spread-function, I was able to
+                mimic the same behavior.
               </p>
 
+
               <div>
-                <img src="assets/img/portfolio/psfex.JPG"  alt=""/>
+                <img src="assets/img/portfolio/psfex.JPG" alt="" />
               </div>
 
               <p>
-                The above photo shows the PSF, along with a grey-scale image of a single pixel at the center. The produced sensor measurements accurately reflects 
-                the PSF for a single pixel. As more pixels are added, the PSF grows in complexity. Here is an example of the sensor measurements in RGB.
+                The above photo shows the PSF, along with a grey-scale image of a single pixel at the center. The
+                produced sensor measurements accurately reflects
+                the PSF for a single pixel. As more pixels are added, the PSF grows in complexity. Here is an example of
+                the sensor measurements in RGB.
               </p>
 
               <div>
-                <img src="assets/img/portfolio/SM.png"  width="25%" alt=""/>
+                <img src="assets/img/portfolio/SM.png" width="25%" alt="" />
               </div>
 
               <p>
-                With this implementation, I was able to reconstruct the position of pixels with as little as 5% of the sensor measurements. But instead 
-                of doing something very motion-capture inspired like the Deconvolving Diffraction paper, we decided to move towards natural scenes.
-                This is where several pre-trained Generative Adversarial Networks were introduced. 
+                With this implementation, I was able to reconstruct the position of pixels with as little as 5% of the
+                sensor measurements. But instead
+                of doing something very motion-capture inspired like the Deconvolving Diffraction paper, we decided to
+                move towards natural scenes.
+                This is where several pre-trained Generative Adversarial Networks were introduced.
               </p>
-            
-            <h3>Adding in the GAN</h3>
+            </div>
+
+            <div>
+              <h3>Adding in the GAN</h3>
               <p>
-                For this project, I tried out several different GANs, all of which resulted in the same problem. The first network I tried was a 
+                For this project, I tried out several different GANs, all of which resulted in the same problem. The
+                first network I tried was a
                 Deep Convolutional GAN (DCGAN) trained on FashionGen, a dataset of general fashion which
-                was contained in the PyTorch Hub. Here I was able to reconstruct small (64,64) images using this DCGAN and gradient descent with similar success. I could use as little
-                as 1% of the sensor measurements as end up with a reasonably comparable image. Unfortunately, because of the small sizes, the images themselves did not look great.
+                was contained in the PyTorch Hub. Here I was able to reconstruct small (64,64) images using this DCGAN
+                and gradient descent with similar success. I could use as little
+                as 1% of the sensor measurements as end up with a reasonably comparable image. Unfortunately, because of
+                the small sizes, the images themselves did not look great.
                 Moving up to higher resolution images did produce promising results.
               </p>
 
               <div class="portfolio-row-images">
-                <img src="assets/img/portfolio/TestImage.png" width="25%" alt=""/>
-                <img src="assets/img/portfolio/Sampling.png" width="25%" alt=""/>
-                <img src="assets/img/portfolio/SM.png" width="25%" alt=""/>
-                <img src="assets/img/portfolio/SpareSM.png" width="25%" alt=""/>
+                <img src="assets/img/portfolio/TestImage.png" width="25%" alt="" />
+                <img src="assets/img/portfolio/Sampling.png" width="25%" alt="" />
+                <img src="assets/img/portfolio/SM.png" width="25%" alt="" />
+                <img src="assets/img/portfolio/SpareSM.png" width="25%" alt="" />
               </div>
 
               <p>
-                Here is an example of the results, using a pre-trained Progressive GAN (PGAN) trained on celebAHQ-256, which is a dataset trained on celebrity photos also in the PyTorch Hub.
-                The first image is our test image that was generated by the PGAN. I obtained its sensor measurements and then did a 25% sub-sampling. From here, I initialized a random
-                start, and began to guess and refine using the PGAN and gradient descent. The images below depict the first iteration, the last iteration, and a transformation between the two.
+                Here is an example of the results, using a pre-trained Progressive GAN (PGAN) trained on celebAHQ-256,
+                which is a dataset trained on celebrity photos also in the PyTorch Hub.
+                The first image is our test image that was generated by the PGAN. I obtained its sensor measurements and
+                then did a 25% sub-sampling. From here, I initialized a random
+                start, and began to guess and refine using the PGAN and gradient descent. The images below depict the
+                first iteration, the last iteration, and a transformation between the two.
               </p>
 
-              <div class="portfolio-row-images">
-                <img src="assets/img/portfolio/It0.png" width="25%" alt=""/>
-                <img src="assets/img/portfolio/GanTransform.gif" width="25%" alt="">
-                <img src="assets/img/portfolio/OptImg.png" width="25%" alt=""/>
+              <div class="center-image">
+                <div class="portfolio-row-images">
+                  <img src="assets/img/portfolio/It0.png" width="33%" alt="" />
+                  <img src="assets/img/portfolio/GanTransform.gif" width="33%" alt="">
+                  <img src="assets/img/portfolio/OptImg.png" width="33%" alt="" />
+                </div>
               </div>
+            </div>
 
-            <h3>Results and Future Work</h3>
+            <div>
+              <h3>Results and Future Work</h3>
               <p>
-                I began to hit a number of issues when trying to incorporate images that were not generated by the GAN itself. I obtained images directly from the dataset and attempted to
-                recontsruct them from an inital guess, but the optimized image never resembled the real life image. I believe this had to do with mode collapse, and the limited domain
+                I began to hit a number of issues when trying to incorporate images that were not generated by the GAN
+                itself. I obtained images directly from the dataset and attempted to
+                recontsruct them from an inital guess, but the optimized image never resembled the real life image. I
+                believe this had to do with mode collapse, and the limited domain
                 of GANs as they are trained and optimized. Several papers like
-                <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Bau_Seeing_What_a_GAN_Cannot_Generate_ICCV_2019_paper.pdf" target="_blank" rel="noopener noreferrer">"Seeing what a GAN Cannot Generate</a>
-                discuss in detail the reasons that mode collapse happens. At the end of the day, however, I proved it was possible to reconstruct images close to the original 
-                based off as little as 5% of information. While this may not be useful in the image domain, it might be applicable in other domains such as sound.
+                <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Bau_Seeing_What_a_GAN_Cannot_Generate_ICCV_2019_paper.pdf"
+                  target="_blank" rel="noopener noreferrer">"Seeing what a GAN Cannot Generate</a>
+                discuss in detail the reasons that mode collapse happens. At the end of the day, however, I proved it
+                was
+                possible to reconstruct images close to the original
+                based off as little as 5% of information. While this may not be useful in the image domain, it might be
+                applicable in other domains such as sound.
               </p>
+            </div>
 
-              <p>For more details on the entire project please checkout my github repository!</p>
+            <p>For more details on the entire project please checkout my github repository!</p>
 
           </div>
 
@@ -151,7 +187,7 @@
   <!-- Template Main JS File -->
   <canvas class="background"></canvas>
   <script src="assets/js/main.js"></script>
-  <script src= "assets/js/particles/dist/particles.min.js"></script>
+  <script src="assets/js/particles/dist/particles.min.js"></script>
 </body>
 
 </html>
