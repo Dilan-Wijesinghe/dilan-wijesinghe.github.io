@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Portfolio - The Cutting Board</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <main id="main">
+
+        <!-- ======= Portfolio Details ======= -->
+        <div id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="col">
+                    <h2 class="portfolio-title">The Cutting Board</h2>
+        
+                    <iframe style="width:75vw; height:75vh; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" 
+                    src="https://www.youtube.com/embed/ZvTafgzb0Ng" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    <div class="portfolio-info">
+                        <h2>Project Information</h2>
+                        <ul>
+                            <li><strong>Category</strong>: Instrument Design, Embedded Systems, Microcontrollers, Arduino</li>
+                            <!-- <li><strong>Client</strong>: ASU Company</li> -->
+                            <li><strong>Completion date</strong>: 10 June, 2023</li>
+                            <li><strong>Github Repository</strong>:
+                                <a href="https://github.com/Dilan-Wijesinghe/CuttingBoard" class="instagram"
+                                    target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                            </li>
+                        </ul>
+
+                        <div>
+                            <h4>Project Overview</h4>
+                            <p>
+                                The Cutting Board is a live looping musical instrument that uses a contact microphone embedded into a piece of wood to produce sound.
+                                The Cutting Board works by picking up vibrations from the wooden board and sends them to an audio interface that is connected
+                                to the musical software MAX 8. MAX 8 is a visual programming language that allows users to create their own
+                                sounds and instruments. The sounds produced on the wooden board can be looped into four different track. The idea is that each track 
+                                represents a different percussive instrument in a drum kit, but the exact sound can be created by the user.
+                            </p>
+
+                            <p>
+                                Along with this looping mechanism, there are six potentiometers that can be used to change the quality of the sound on
+                                the fly. These potentiometers are associated with food terms that are used both in cooking and in music. I was inspired
+                                by the idea that every song has its own recipe to follow in order to create a unique sound. The potentiometers are like values you can tune within a dish.
+                                Lacking in spice? Add some in! Tasting a bit unsalted? Add some salt in! The potentiometers are associated with the following terms:
+                                <ul>
+                                    <li>Reverb - Depth / No-Depth</li>
+                                    <li>Delay - Sharp / Aftertaste</li>
+                                    <li>Distortion - Sweet / Salty</li>
+                                    <li>ADSR - Soft / Hard</li>
+                                    <li>Bandpass Filter - Hot / Cold</li>
+                                    <li>Saturation - Bland / Spicy </li>
+                                </ul>
+                            </p>
+
+                        </div>
+
+
+                        <div>
+                            <div>
+                                <h4>Design</h4>
+                                <p>
+                                   The design for the Cutting Board can be broken down into three main steps. The first step is the mechanical design, which involved 
+                                   cutting, shaping, and carving a piece of wood into a usable shape. The second step is the electrical design, which involved choosing 
+                                   a board and microcontroller to use, wiring the potentiometers to the board and soldering them in place. I also added in a 
+                                   switch which would act as a toggle for looping. The third and final step was to 
+                                   create software that could interface with the microcontroller and the contact microphone and send those signals to MAX.
+                                   <div>
+                                        <img src="assets/img/portfolio/cbfinal_f.jpg" width="50%" height="50%"
+                                        alt="" />
+                                   </div>
+                                   This is the end result of the Cutting Board.
+
+                                </p>
+
+                            </div>
+
+                            <div>
+                                <h4>Mechanical</h4>
+                                <p>
+                                   The Cutting Board started with a wooden board that I cut down to 6" x 14". I then routed the edges to give it a more finished look.
+                                   I then utilized a mill to carve out two spaces, one for the electronics to fit and another for the contact microphone. Below is the
+                                   board after it was cut, routed, and sanded down to size.
+                                   <div>
+                                        <img src="assets/img/portfolio/cbinit.jpg" width="50%" height="50%"
+                                        alt="" />
+                                   </div>
+
+                                </p>
+
+                                <h4>Electrical</h4>
+                                <p>
+                                    I utilized Unexpected Maker's PRO S3 to send information from the Cutting Board to my computer. This uses an ESP32 microcontroller which 
+                                    has wireless capabilities and utilizes as 12-bit ADC. In future work I could potentially make the Cutting Board wireless, but for now it connects directly to a computer.
+                                    I used six potentiometers and a switch to tune the above-mentioned parameters that are associated with a food quality. Below is an image of the back of the Cutting Board.
+                                    I used a piece of clear acrylic to cover it so that the user could see the electronics inside.
+                                   <div>
+                                        <img src="assets/img/portfolio/cbfinal_b.jpg" width="50%" height="50%"
+                                        alt="" />
+                                   </div>
+
+                                </p>
+
+                            </div>
+
+                            <div>
+                                <h4>Software</h4>
+                                <p>
+                                    After getting the Cutting Board's chassis and electrical guts assembled, I switched over to software. I used the Arduino IDE to program the ESP32, which takes in input
+                                    from the six potentiometers and a switch. The information gathered from these devices are pre-processed and averaged before being sent to MAX through Serial. 
+                                    You can checkout the details of the code in my Github repository.
+                                </p>
+
+                                <p>
+                                    On the MAX side of things, I created several knobs that would take in the information from the ESP32 and use it to tune the sound. 
+                                    I also created a toggle switch that would begin and end the recordings. For safety, I also bound the ability to record into the four tracks to 1-4 on my keyboard.
+                                    The MAX patch also has a metronome that can be turned on and off. It also creates a tick sound and a visual cue to help the user keep time. Along with this, 
+                                    there are visual representations of the four tracks that can be looped. The user can see the waveform of the sound they are creating and can see when the loop is about to end.
+                                    There is a gain slider and a normalization button that can be used to adjust the volume of the tracks. To clear them out you can hit the clear button or press '0' on the keyboard.
+                                    The user can also see the current value of the potentiometers on the MAX patch.
+                                    Below is an image of the MAX patch.
+                                </p>
+
+                                <div>
+                                    <img src="assets/img/portfolio/CuttingBoardUpdated.jpg" width="50%" height="50%"
+                                    alt="" />
+                               </div>
+                            </div>
+
+                            <div>
+                                <h4>How to Play</h4>
+                                <p> In order to play, begin by choosing a tempo, and then clicking the Loop Duration button. This sets the buffer size
+                                    to the appropriate length given the tempo. Start by playing a rhythm on the board. You can use the metronome to help you keep time.
+                                    The output of this will be heard through the speakers. Once you have a rhythm you like, you can hit the record button to begin recording. Pressing 1-4 will record
+                                    to that specific track. The track will automatically loop and playback after recording. You can adjust the gain of the track using the FX and RAW sliders.
+                                    The FX slider controls the volume of the effects, and the RAW sound controls the output of the looped audio.
+
+                                    As part of my performance, I added in three samples that are looped as well. I have attached these to my Github. You can download and load them into the MAX patch, 
+                                    and then play them back in the unlocked patch. 
+                                </p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- <h4>Gallery</h4>
+
+                        <div class="bmo_row">
+                            <div class="bmo_column">
+                                <img src="assets/img/portfolio/cbfinal_f.jpg" alt="" />
+                                <img src="assets/img/portfolio/cbfinal_b.jpg" alt="" />
+
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="pic-ctn">
+                            <img src="assets/img/portfolio/BMoSkeletonCropped.jpg" alt="" class="pic"/>
+                            <img src="assets/img/portfolio/MMoSkeletonCropped.jpg" alt="" class="pic"/>
+                            <img src="assets/img/portfolio/HMoSkeletonCropped.jpg" alt="" class="pic"/>
+                            <img src="assets/img/portfolio/MMoAssembled.jpg"       alt="" class="pic"/>
+                        </div> -->
+                    </div>
+
+                </div>
+
+            </div>
+        </div><!-- End Portfolio Details -->
+
+    </main><!-- End #main -->
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <canvas class="background"></canvas>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particles/dist/particles.min.js"></script>
+</body>
+
+</html>
