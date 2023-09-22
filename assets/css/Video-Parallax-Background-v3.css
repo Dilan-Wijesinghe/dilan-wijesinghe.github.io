@@ -1,0 +1,13 @@
+.video-parallax-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mobile-background {
+  background-image: url("../../assets/img/gifs/circle.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
