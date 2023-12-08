@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="../assets/css/bs-theme-overrides.css">
     <link rel="stylesheet" href="../assets/css/animate.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../assets/css/Articles-Cards-images.css">
     <link rel="stylesheet" href="../assets/css/Basic-fancyBox-Gallery-v2.css">
+    <link rel="stylesheet" href="../assets/css/Features-Small-Icons-Color-icons.css">
     <link rel="stylesheet" href="../assets/css/Lightbox-Gallery-baguetteBox.min.css">
     <link rel="stylesheet" href="../assets/css/Video-Parallax-Background-v3.css">
 <link href="art/DW_Logo_BW64.png" rel ="icon">
@@ -35,19 +37,19 @@
     <section class="py-5">
         <div class="container py-4 py-xl-5">
             <div class="row row-cols-1 row-cols-md-2">
-                <div class="col"><img class="w-100 fit-cover" style="min-height: 300px;border-radius: 9px;margin-bottom: 3px;border-width: 3px;border-style: solid;" src="../assets/img/project_imgs/SM.png">
+                <div class="col"><img class="w-100 fit-cover" style="min-height: 300px;border-radius: 9px;margin-bottom: 3px;border-width: 3px;border-style: solid;" src="../assets/img/project_imgs/GAIR/SM.png">
                     <div class="text-center text-md-start d-flex flex-column align-items-center align-items-md-start" style="margin-top: 18px;">
                         <div>
                             <h4>Gallery</h4>
                             <section class="photo-gallery py-4 py-xl-1">
                                 <div class="container">
                                     <div class="row gx-3 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox="">
-                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/TestImage.png"><img class="img-fluid" src="../assets/img/project_imgs/TestImage.png"></a></div>
-                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/Sampling.png"><img class="img-fluid" src="../assets/img/project_imgs/Sampling.png"></a></div>
-                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/SpareSM.png"><img class="img-fluid" src="../assets/img/project_imgs/SpareSM.png"></a></div>
-                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/It0.png"><img class="img-fluid" src="../assets/img/project_imgs/It0.png"></a></div>
+                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/GAIR/TestImage.png"><img class="img-fluid" src="../assets/img/project_imgs/GAIR/TestImage.png"></a></div>
+                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/GAIR/Sampling.png"><img class="img-fluid" src="../assets/img/project_imgs/GAIR/Sampling.png"></a></div>
+                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/GAIR/SpareSM.png"><img class="img-fluid" src="../assets/img/project_imgs/GAIR/SpareSM.png"></a></div>
+                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/GAIR/It0.png"><img class="img-fluid" src="../assets/img/project_imgs/GAIR/It0.png"></a></div>
                                         <div class="col-xl-4 item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/gifs/GanTransform.gif"><img class="img-fluid" src="../assets/img/gifs/GanTransform.gif"></a></div>
-                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/OptImg.png"><img class="img-fluid" src="../assets/img/project_imgs/OptImg.png"></a></div>
+                                        <div class="col item" style="padding-right: 0px;padding-left: 0px;margin-top: 0px;"><a href="../assets/img/project_imgs/GAIR/OptImg.png"><img class="img-fluid" src="../assets/img/project_imgs/GAIR/OptImg.png"></a></div>
                                     </div>
                                 </div>
                             </section>
@@ -81,7 +83,7 @@
                     <div class="text-center text-md-start d-flex flex-column align-items-center align-items-md-start mb-5">
                         <div>
                             <h4>Introduction</h4>
-                            <p>To begin this project, I first implemented a version of the paper "Deconvolving Diffraction for Fast Imaging of Sparse Scenes" which utilized a diffractive lens to spread a point in the scene using a point-spread-function (PSF). Using an implementation of CSIP Lab's Lensless Camera point-spread-function, I was able to mimic the same behavior.</p><a href="#"><img class="w-100" src="../assets/img/project_imgs/psfex.jpg"></a>
+                            <p>To begin this project, I first implemented a version of the paper "Deconvolving Diffraction for Fast Imaging of Sparse Scenes" which utilized a diffractive lens to spread a point in the scene using a point-spread-function (PSF). Using an implementation of CSIP Lab's Lensless Camera point-spread-function, I was able to mimic the same behavior.</p><a href="#"><img class="w-100" src="../assets/img/project_imgs/GAIR/psfex.jpg"></a>
                             <p>The above photo shows the PSF, along with a grey-scale image of a single pixel at the center. The produced sensor measurements accurately reflects the PSF for a single pixel. As more pixels are added, the PSF grows in complexity. To the left is an example of the sensor measurements in RGB.<br><br>With this implementation, I was able to reconstruct the position of pixels with as little as 5% of the sensor measurements. But instead of doing something very motion-capture inspired like the Deconvolving Diffraction paper, we decided to move towards natural scenes. This is where several pre-trained Generative Adversarial Networks were introduced.</p><a href="#"></a>
                         </div>
                     </div>
